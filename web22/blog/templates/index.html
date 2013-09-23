@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>test page</title>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body>
+    <div>
+    {%for category in first_book_category_list%}
+    <li>{{category.category}}</li>
+        <blockquote>
+            {%for s_category in category.bookcategory_set.all%}
+                <li><a href="">{{s_category.category}}</a></li>
+            {%endfor%}
+        </blockquote>
+    {%endfor%}
+    </div>
+    </body>
+</html>
